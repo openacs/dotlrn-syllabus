@@ -50,7 +50,9 @@ namespace eval dotlrn_syllabus {
     } {
         Used for one-time init - must be repeatable!
     } {
-        dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key]
+        dotlrn_applet::add_applet_to_dotlrn \
+            -applet_key [applet_key] \
+            -package_key [package_key]
     }
 
     ad_proc -public remove_applet {
