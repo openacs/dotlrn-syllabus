@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-syllabus" package_version="0.1d" locale="nl_NL" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-syllabus" package_version="2.0.3" locale="nl_NL" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Syllabus administratie</msg>
   <msg key="Download">Ontvangen</msg>
-  <msg key="Edit">Wijzigen</msg>
+  <msg key="Edit">Bewerken</msg>
   <msg key="Go_to">Ga naar</msg>
   <msg key="Go_to_the_Syllabus">Ga naar de Syllabus</msg>
-  <msg key="lt_a_hrefupload_urlUploa">Een Syllabus&lt;a href=&quot;%upload_url%&quot;&gt;aanbieden&lt;/a&gt; of &lt;a href=&quot;%link_to_url%&quot;&gt;koppelen&lt;/a&gt; </msg>
+  <msg key="lt_a_hrefupload_urlUploa">Een syllabus&lt;a href=&quot;%upload_url%&quot;&gt;aanbieden&lt;/a&gt; of &lt;a href=&quot;%link_to_url%&quot;&gt;koppelen&lt;/a&gt; </msg>
   <msg key="No_Syllabus_Found">Geen syllabus beschkbaar</msg>
   <msg key="or">of</msg>
   <msg key="pretty_name">Syllabus</msg>
