@@ -87,8 +87,8 @@ begin
     foo := acs_sc_impl.new_alias(
         'portal_datasource',
         'syllabus_portlet',
-        'MyName',
-        'syllabus_portlet::my_name',
+        'GetMyName',
+        'syllabus_portlet::get_my_name',
         'TCL'
     );
 
@@ -137,22 +137,6 @@ begin
         'syllabus_portlet',
         'RemoveSelfFromPage',
         'syllabus_portlet::remove_self_from_page',
-        'TCL'
-    );
-
-    foo := acs_sc_impl.new_alias(
-        'portal_datasource',
-        'syllabus_portlet',
-        'MakeSelfAvailable',
-        'syllabus_portlet::make_self_available',
-        'TCL'
-    );
-
-    foo := acs_sc_impl.new_alias(
-        'portal_datasource',
-        'syllabus_portlet',
-        'MakeSelfUnavailable',
-        'syllabus_portlet::make_self_unavailable',
         'TCL'
     );
 

@@ -14,11 +14,10 @@
 #  details.
 #
 
-# dotlrn-syllabus/tcl/syllabus-portlet-procs.tcl
-
 ad_library {
 
-    Procedures to support the syllabus portlet
+    Procedures to support the syllabus portlet. Note that this
+    portlet depends on dotlrn!
 
     @author arjun (arjun@openforce.net)
     @creation-date 2002-02-24
@@ -33,7 +32,7 @@ namespace eval syllabus_portlet {
         return "dotlrn-syllabus"
     }
 
-    ad_proc -private my_name {
+    ad_proc -private get_my_name {
     } {
         return "syllabus_portlet"
     }
@@ -53,7 +52,7 @@ namespace eval syllabus_portlet {
 	portal_id
 	instance_id
     } {
-        Adds a syllabus portlet element to the specified page.
+        Adds a syllabus portlet to the specified portal.
 
         @param page_id The page to add self to
 	@param portal_id The portal to add self to
@@ -61,12 +60,12 @@ namespace eval syllabus_portlet {
 	@return element_id The new element's id
     } {
         return [portal::add_element_or_append_id \
-            -portal_id $portal_id \
-            -page_id $page_id \
-            -portlet_name [my_name] \
-            -pretty_name [get_pretty_name] \
-            -key "package_id" \
-            -value_id $instance_id
+                    -portal_id $portal_id \
+                    -page_id $page_id \
+                    -portlet_name [get_my_name] \
+                    -pretty_name [get_pretty_name] \
+                    -key "package_id" \
+                    -value_id $instance_id
         ]
     }
 
@@ -82,31 +81,9 @@ namespace eval syllabus_portlet {
     } {
         portal::remove_element_or_remove_id \
             -portal_id $portal_id \
-            -portlet_name [my_name] \
+            -portlet_name [get_my_name] \
             -key "package_id" \
             -value_id $instance_id
-    }
-
-    ad_proc -public make_self_available {
- 	portal_id
-    } {
- 	Wrapper for the portal:: proc
- 	
- 	@param portal_id
-    } {
- 	portal::make_datasource_available \
-            $portal_id [portal::get_datasource_id [my_name]]
-    }
-
-    ad_proc -public make_self_unavailable {
-	portal_id
-    } {
-	Wrapper for the portal:: proc
-	
-	@param portal_id
-    } {
-	portal::make_datasource_unavailable \
-            $portal_id [portal::get_datasource_id [my_name]]
     }
 
     ad_proc -public show {
@@ -124,10 +101,9 @@ namespace eval syllabus_portlet {
             -config_list $cf
     }
 
-    ad_proc -public edit {
-    } {
-	return {}
-    }
+    #
+    # helper procs
+    #
 
     ad_proc -public get_syllabus_info_list {
         {-community_id:required}
@@ -137,7 +113,7 @@ namespace eval syllabus_portlet {
         set community_id [dotlrn_community::get_community_id]
         set element_id [portal::get_element_ids_by_ds \
                 [dotlrn_community::get_portal_template_id $community_id] \
-                [fs_portlet::my_name]
+                [fs_portlet::get_my_name]
         ]
         set root_folder_id \
                 [portal::get_element_param [lindex $element_id 0] "folder_id"]

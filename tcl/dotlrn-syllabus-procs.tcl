@@ -74,8 +74,6 @@ namespace eval dotlrn_syllabus {
     } {
         set pt_id [dotlrn_community::get_portal_template_id $community_id]
 
-        syllabus_portlet::make_self_available $pt_id
-
         if {[dotlrn_community::dummy_comm_p -community_id $community_id]} {
             syllabus_portlet::add_self_to_page $pt_id $community_id
             return

@@ -48,7 +48,7 @@ begin
     foo := acs_sc_impl.delete_alias(
         impl_contract_name => 'portal_datasource',
         impl_name => 'syllabus_portlet',
-        impl_operation_name => 'MyName'
+        impl_operation_name => 'GetMyName'
     );
 
     foo := acs_sc_impl.delete_alias(
@@ -85,18 +85,6 @@ begin
         impl_contract_name => 'portal_datasource',
         impl_name => 'syllabus_portlet',
         impl_operation_name => 'RemoveSelfFromPage'
-    );
-
-    foo := acs_sc_impl.delete_alias(
-        impl_contract_name => 'portal_datasource',
-        impl_name => 'syllabus_portlet',
-        impl_operation_name => 'MakeSelfAvailable'
-    );
-
-    foo := acs_sc_impl.delete_alias(
-        impl_contract_name => 'portal_datasource',
-        impl_name => 'syllabus_portlet',
-        impl_operation_name => 'MakeSelfUnavailable'
     );
 
     acs_sc_impl.delete(

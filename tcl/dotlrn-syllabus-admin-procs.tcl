@@ -68,7 +68,6 @@ namespace eval dotlrn_syllabus_admin {
         set pt_id \
                 [dotlrn_community::get_community_admin_portal_id $community_id]
 
-        syllabus_admin_portlet::make_self_available $pt_id 
         syllabus_admin_portlet::add_self_to_page $pt_id $community_id
     }
 
