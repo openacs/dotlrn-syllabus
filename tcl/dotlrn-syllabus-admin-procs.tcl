@@ -125,4 +125,14 @@ namespace eval dotlrn_syllabus_admin {
     } {
     }
 
+    ad_proc -public change_event_handler {
+        community_id
+        event
+        old_value
+        new_value
+    } { 
+        listens for the following events: 
+    } { 
+    }   
+
 }

@@ -141,6 +141,14 @@ select acs_sc_impl_alias__new (
    	'TCL'
 );
 
+select acs_sc_impl_alias__new (
+	'dotlrn_applet',
+	'dotlrn_syllabus',
+ 	'ChangeEventHandler',
+  	'dotlrn_syllabus::change_event_handler',
+   	'TCL'
+);
+
 -- Add the binding
 select acs_sc_binding__new (
         'dotlrn_applet',						--contract name

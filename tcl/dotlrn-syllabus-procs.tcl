@@ -177,4 +177,14 @@ namespace eval dotlrn_syllabus {
         add_applet_to_community $new_community_id
     }
 
+    ad_proc -public change_event_handler {
+        community_id
+        event
+        old_value
+        new_value
+    } { 
+        listens for the following events: 
+    } { 
+    }   
+
 }
