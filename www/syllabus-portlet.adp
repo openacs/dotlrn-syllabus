@@ -21,16 +21,16 @@
 <if @config.shaded_p@ ne "t">
   <if @syllabus_id@ not eq "">
     <if @type@ eq url>
-      <a href="file-storage/url-goto?url_id=@syllabus_id@">Go to
+      <a href="file-storage/url-goto?url_id=@syllabus_id@">#dotlrn-syllabus.Go_to#
     </if>
     <else>
-      <a href="file-storage/download/index?version_id=@live_revision@">Download
+      <a href="file-storage/download/index?version_id=@live_revision@">#dotlrn-syllabus.Download#
     </else>
-    Syllabus</a>
+    #dotlrn-syllabus.pretty_name#</a>
   </if>
 
   <else>
-    <small>No Syllabus Found</small>
+    <small>#dotlrn-syllabus.No_Syllabus_Found#</small>
   </else>
   </if>
 <else>

@@ -39,7 +39,7 @@ namespace eval syllabus_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Syllabus"
+	return "#dotlrn-syllabus.pretty_name#"
     }
 
     ad_proc -public link {

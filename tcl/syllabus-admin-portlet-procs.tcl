@@ -38,7 +38,7 @@ namespace eval syllabus_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Syllabus Administration"
+	return "#dotlrn-syllabus.admin_pretty_name#"
     }
 
     ad_proc -public add_self_to_page {

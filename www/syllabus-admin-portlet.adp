@@ -22,17 +22,16 @@
   
   <if @syllabus_id@ not eq "">
     <if @type@ eq url>
-        <li><a href="file-storage/url-goto?url_id=@syllabus_id@">Go to</a> or
-        <a href="file-storage/simple-edit?object_id=@syllabus_id@">Edit</a>
-       Syllabus</a>
+        <li><a href="file-storage/url-goto?url_id=@syllabus_id@">#dotlrn-syllabus.Go_to#</a> #dotlrn-syllabus.or#
+        <a href="file-storage/simple-edit?object_id=@syllabus_id@">#dotlrn-syllabus.Edit#</a>
+       #dotlrn-syllabus.pretty_name#
     </if>
     <else>
-      <li><a href="file-storage/file?file_id=@syllabus_id@">Go to the 
-      Syllabus</a>
+      <li><a href="file-storage/file?file_id=@syllabus_id@">#dotlrn-syllabus.Go_to_the_Syllabus#</a>
     </else>
   </if>
   <else>
-    <li><a href="file-storage/file-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">Upload</a> or <a href="file-storage/simple-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">link</a> to a Syllabus
+    <li>#dotlrn-syllabus.lt_a_hrefupload_urlUploa#
   </else>
   
 </ul>
