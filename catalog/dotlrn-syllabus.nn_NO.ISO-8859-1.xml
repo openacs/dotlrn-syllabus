@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="2.0.3" locale="nn_NO" charset="ISO-8859-1">
+
+  <msg key="admin_pretty_name">Pensumadministrasjon</msg>
+  <msg key="Download">Last ned</msg>
+  <msg key="Edit">Rediger</msg>
+  <msg key="Go_to">Gå til</msg>
+  <msg key="Go_to_the_Syllabus">Gå til Pensum</msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Last opp&lt;/a&gt; eller &lt;a href=&quot;%link_to_url%&quot;&gt;lenk&lt;/a&gt; til eit pensum</msg>
+  <msg key="No_Syllabus_Found">Ingen pensum funne</msg>
+  <msg key="or">eller</msg>
+  <msg key="pretty_name">Pensum</msg>
+</message_catalog>
