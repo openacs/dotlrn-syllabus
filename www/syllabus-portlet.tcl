@@ -36,4 +36,4 @@ set public_folder_id [lindex $syllabus_info_list 0]
 set syllabus_id [lindex $syllabus_info_list 1]
 set type [lindex $syllabus_info_list 2]
 set live_revision [lindex $syllabus_info_list 3]
-
+set file_upload_name [lindex $syllabus_info_list 4]
