@@ -46,7 +46,8 @@ namespace eval syllabus_admin_portlet {
     } {
         Adds a syllabus admin portlet element to the specified portal
     } {
-        return [portal::add_element_parameters \
+        # this is simple, just use add_element, not add_element_parameters
+        return [portal::add_element \
                 -portal_id $portal_id \
                 -portlet_name [get_my_name]
         ]
@@ -70,6 +71,15 @@ namespace eval syllabus_admin_portlet {
             -template_src "syllabus-admin-portlet" \
             -package_key [my_package_key] \
             -config_list $cf
+    }
+
+
+
+    ad_proc -public link {
+        cf
+    } {
+    } {
+        # noop
     }
 
 }

@@ -58,7 +58,6 @@ namespace eval syllabus_portlet {
     } {
         return [portal::add_element_parameters \
                     -portal_id $portal_id \
-                    -page_id $page_id \
                     -portlet_name [get_my_name] \
                     -pretty_name [get_pretty_name] \
                     -key "package_id" \
@@ -110,13 +109,13 @@ namespace eval syllabus_portlet {
 
         set community_id [dotlrn_community::get_community_id]
         set element_id [portal::get_element_ids_by_ds \
-                [dotlrn_community::get_portal_template_id $community_id] \
+                [dotlrn_community::get_portal_id] \
                 [fs_portlet::get_my_name]
         ]
         set root_folder_id \
-                [portal::get_element_param [lindex $element_id 0] "folder_id"]
+                [portal::get_element_param [lindex $element_id 0] folder_id]
         set public_folder_id \
-                [fs::get_folder -parent_id $root_folder_id -name "public"]
+                [fs::get_folder -parent_id $root_folder_id -name public]
         
         lappend out_list $public_folder_id
 
@@ -124,16 +123,17 @@ namespace eval syllabus_portlet {
                 -user_id [dotlrn::get_users_rel_segment_id] 
         ]
         
-        # this could move to fs::
+        # this should move to fs::
         foreach row $rows {
-            set name [ns_set get $row "name"]
-            if {[string equal -nocase $name "syllabus"]} {
-                lappend out_list [ns_set get $row "object_id"]
-                lappend out_list [ns_set get $row "type"]
-                lappend out_list [ns_set get $row "live_revision"]
+            if {[string equal -nocase [ns_set get $row name] syllabus]} {
+                lappend out_list [ns_set get $row object_id]
+                lappend out_list [ns_set get $row type]
+                lappend out_list [ns_set get $row live_revision]
             }
         }
-        
+
+        # ns_log notice "aks11 $out_list"
+
         return $out_list
     }
 

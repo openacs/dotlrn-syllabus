@@ -70,7 +70,7 @@ namespace eval dotlrn_syllabus {
                                  -community_id $community_id
         ]
                 
-        syllabus_admin_portlet::add_self_to_page $admin_portal_id
+        syllabus_admin_portlet::add_self_to_page -portal_id $admin_portal_id
 
         # set up the syllabus portlet
         set portal_id [dotlrn_community::get_portal_id -community_id $community_id]
