@@ -119,6 +119,10 @@ namespace eval syllabus_portlet {
         
         lappend out_list $public_folder_id
 
+        # DRB: This is pretty sick.   Return the full folder contents then
+        # search the list rather than return the one file that is named "syllabus"?
+        # This would be ugly even if it *weren't* slow.
+
         set rows [fs::get_folder_contents -folder_id $public_folder_id \
                 -user_id [dotlrn::get_users_rel_segment_id] 
         ]
