@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="0.1d" locale="ast_ES" charset="ISO-8859-1">
+
+  <msg key="admin_pretty_name">Alministrar el Plan d'Estudios</msg>
+  <msg key="Download">Descargar</msg>
+  <msg key="Edit">Editar</msg>
+  <msg key="Go_to">Dir a</msg>
+  <msg key="Go_to_the_Syllabus">Dir al Plan d'Estudios</msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Xubir&lt;/a&gt; o &lt;a href=&quot;%link_to_url%&quot;&gt;enllazar&lt;/a&gt; a un Plan d'Estudios</msg>
+  <msg key="No_Syllabus_Found">Nun s'alcontró'l Plan d'Estudios</msg>
+  <msg key="or">o</msg>
+  <msg key="pretty_name">Plan d'Estudios</msg>
+</message_catalog>
