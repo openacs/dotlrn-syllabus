@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="2.1.0b1" locale="ca_ES" charset="ISO-8859-1">
+
+  <msg key="admin_pretty_name">Administració de programes </msg>
+  <msg key="Download">Descarregar </msg>
+  <msg key="Edit">Editar </msg>
+  <msg key="Go_to">Anar a </msg>
+  <msg key="Go_to_the_Syllabus">Anar al programa </msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Carregar&lt;/a&gt; o &lt;a href=&quot;%link_to_url%&quot;&gt;enllaçar&lt;/a&gt; a un programa </msg>
+  <msg key="No_Syllabus_Found">No s'ha trobat cap programa </msg>
+  <msg key="or">o </msg>
+  <msg key="pretty_name">Programa </msg>
+</message_catalog>
