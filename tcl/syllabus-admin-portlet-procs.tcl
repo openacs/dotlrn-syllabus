@@ -46,10 +46,12 @@ namespace eval syllabus_admin_portlet {
     } {
         Adds a syllabus admin portlet element to the specified portal
     } {
-        # this is simple, just use add_element, not add_element_parameters
-        return [portal::add_element \
+        # we pass a fake key and value here, don't worry about it
+        return [portal::add_element_parameters \
                 -portal_id $portal_id \
-                -portlet_name [get_my_name]
+                -portlet_name [get_my_name] \
+                -key fake_key \
+                -value fake_vale
         ]
     }
 
