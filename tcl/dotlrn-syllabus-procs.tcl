@@ -79,6 +79,8 @@ namespace eval dotlrn_syllabus {
         ns_set put $args package_id $community_id
 
         add_portlet_helper $portal_id $args
+
+        return ""
     }
 
     ad_proc -public remove_applet_from_community {

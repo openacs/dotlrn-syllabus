@@ -46,7 +46,7 @@ namespace eval syllabus_admin_portlet {
     } {
         Adds a syllabus admin portlet element to the specified portal
     } {
-        return [portal::add_element \
+        return [portal::add_element_parameters \
                 -portal_id $portal_id \
                 -portlet_name [get_my_name]
         ]
