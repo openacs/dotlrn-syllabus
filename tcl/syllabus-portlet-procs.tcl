@@ -126,10 +126,10 @@ namespace eval syllabus_portlet {
         set rows [fs::get_folder_contents -folder_id $public_folder_id \
                 -user_id [dotlrn::get_users_rel_segment_id] 
         ]
-        
+
         # this should move to fs::
         foreach row $rows {
-            if {[string equal -nocase [ns_set get $row name] syllabus]} {
+            if {[string equal -nocase [ns_set get $row name] [_ dotlrn-syllabus.pretty_name]]} {
                 lappend out_list [ns_set get $row object_id]
                 lappend out_list [ns_set get $row type]
                 lappend out_list [ns_set get $row live_revision]
