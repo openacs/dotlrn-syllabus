@@ -107,11 +107,11 @@ namespace eval syllabus_portlet {
     } {
         set out_list [list]
 
-        set community_id [dotlrn_community::get_community_id]
         set element_id [portal::get_element_ids_by_ds \
                 [dotlrn_community::get_portal_id] \
                 [fs_portlet::get_my_name]
         ]
+
         set root_folder_id \
                 [portal::get_element_param [lindex $element_id 0] folder_id]
         set public_folder_id \

@@ -18,7 +18,7 @@
 
 %>
 <if @config.shaded_p@ ne "t">
-  <if @syllabus_id@ not eq "">
+  <if @community_id@ not eq "" and @syllabus_id@ not eq "">
     <if @type@ eq url>
       <a href="file-storage/url-goto?url_id=@syllabus_id@">Go to
     </if>
@@ -27,7 +27,6 @@
     </else>
     Syllabus</a>
   </if>
-
   <else>
     <small>No Syllabus Found</small>
   </else>
