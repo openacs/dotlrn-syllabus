@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <message_catalog package_key="dotlrn-syllabus" package_version="0.1d" locale="ch_zh" charset="utf-8">
 
-  <msg key="Edit">園辞</msg>
+  <msg key="admin_pretty_name">大纲管理</msg>
+  <msg key="Download">下载</msg>
+  <msg key="Edit">编辑</msg>
+  <msg key="Go_to">到</msg>
+  <msg key="Go_to_the_Syllabus">到大纲</msg>
   <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;上传&lt;/a&gt;或&lt;a href=&quot;%link_to_url%&quot;&gt;链接&lt;/a&gt;到大纲</msg>
   <msg key="No_Syllabus_Found">没有找到大纲</msg>
+  <msg key="or">或者</msg>
+  <msg key="pretty_name">大纲</msg>
 </message_catalog>
