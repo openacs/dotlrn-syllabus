@@ -147,7 +147,7 @@ namespace eval syllabus_portlet {
         lappend out_list $public_folder_id
 
         set rows [fs::get_folder_contents -folder_id $public_folder_id \
-                -user_id [dotlrn::get_full_users_rel_segment_id] 
+                -user_id [dotlrn::get_users_rel_segment_id] 
         ]
         
         # this could move to fs::
