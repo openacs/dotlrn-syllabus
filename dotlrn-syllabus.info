@@ -6,18 +6,18 @@
     <pretty-plural>dotLRN Syllabi</pretty-plural>
     <initial-install-p>f</initial-install-p>
     <singleton-p>f</singleton-p>
-
+    
     <version name="0.1d" url="http://openacs.org/repository/download/apm/dotlrn-syllabus-0.1d.apm">
-    <database-support>
-        <database>oracle</database>
-        <database>postgresql</database>
-    </database-support>
-        <owner url="mailto:arjun@openforce.net">Arjun Sanyal</owner>
-        <vendor url="http://openforce.net">OpenForce, Inc</vendor>
+        <owner url="http://openacs.org">OpenACS</owner>
+        <release-date>2003-11-10</release-date>
+        <vendor url="http://openacs.org">OpenACS</vendor>
 
-        <requires url="acs-service-contract" version="4.2"/>
+        <provides url="dotlrn-syllabus" version="0.1d"/>
+        <requires url="acs-service-contract" version="5.0.0a5"/>
         <requires url="dotlrn" version="1.0"/>
 
+        <callbacks>
+        </callbacks>
         <parameters>
         <!-- No version parameters -->
         </parameters>
