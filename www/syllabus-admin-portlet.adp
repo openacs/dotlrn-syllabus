@@ -18,16 +18,21 @@
 
 %>
 
-
-<if @syllabus_id@ not eq "">
-  <if @type@ eq URL>
-    <a href="file-storage/url-goto?url_id=@syllabus_id@">Go to</a> or
-    <a href="file-storage/simple-edit?object_id=@syllabus_id@">Edit</a> Syllabus</a>
+<ul>
+  
+  <if @syllabus_id@ not eq "">
+    <if @type@ eq url>
+        <li><a href="file-storage/url-goto?url_id=@syllabus_id@">Go to</a> or
+        <a href="file-storage/simple-edit?object_id=@syllabus_id@">Edit</a>
+       Syllabus</a>
+    </if>
+    <else>
+      <li><a href="file-storage/file?file_id=@syllabus_id@">Go to the 
+      Syllabus</a>
+    </else>
   </if>
   <else>
-    <a href="file-storage/file?file_id=@syllabus_id@">Go to the Syllabus</a>
+    <li><a href="file-storage/file-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">Upload</a> or <a href="file-storage/simple-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">link</a> to a Syllabus
   </else>
-</if>
-<else>
-  <a href="file-storage/file-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">Upload</a> or <a href="file-storage/simple-add?folder_id=@public_folder_id@&title=Syllabus&lock_title_p=1">link</a> to a Syllabus
-</else>
+  
+</ul>

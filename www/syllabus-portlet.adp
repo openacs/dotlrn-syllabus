@@ -20,14 +20,15 @@
 
 <if @config.shaded_p@ ne "t">
   <if @syllabus_id@ not eq "">
-    <if @type@ eq URL>
-      <a href="file-storage/url-goto?url_id=@syllabus_id@">Go to</a>
+    <if @type@ eq url>
+      <a href="file-storage/url-goto?url_id=@syllabus_id@">Go to
     </if>
     <else>
-      <a href="file-storage/download/index?version_id=@live_revision@">Download</a>
+      <a href="file-storage/download/index?version_id=@live_revision@">Download
     </else>
-    Syllabus
+    Syllabus</a>
   </if>
+
   <else>
     <small>No Syllabus Found</small>
   </else>
