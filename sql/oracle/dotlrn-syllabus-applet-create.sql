@@ -51,6 +51,15 @@ begin
         impl_pl => 'TCL'
     );
 
+    -- RemoveApplet
+    foo := acs_sc_impl.new_alias (
+        impl_contract_name => 'dotlrn_applet',
+        impl_name => 'dotlrn_syllabus',
+        impl_operation_name => 'RemoveApplet',
+        impl_alias => 'dotlrn_syllabus::remove_applet',
+        impl_pl => 'TCL'
+    );
+
     -- AddAppletToCommunity
     foo := acs_sc_impl.new_alias (
         impl_contract_name => 'dotlrn_applet',
@@ -60,12 +69,12 @@ begin
         impl_pl => 'TCL'
     );
 
-    -- RemoveApplet
+    -- RemoveAppletFromCommunity
     foo := acs_sc_impl.new_alias (
         impl_contract_name => 'dotlrn_applet',
         impl_name => 'dotlrn_syllabus',
-        impl_operation_name => 'RemoveApplet',
-        impl_alias => 'dotlrn_syllabus::remove_applet',
+        impl_operation_name => 'RemoveAppletFromCommunity',
+        impl_alias => 'dotlrn_syllabus::remove_applet_from_community',
         impl_pl => 'TCL'
     );
 
@@ -78,21 +87,21 @@ begin
         impl_pl => 'TCL'
     );
 
-    -- AddUserToCommunity
-    foo := acs_sc_impl.new_alias (
-        impl_contract_name => 'dotlrn_applet',
-        impl_name => 'dotlrn_syllabus',
-        impl_operation_name => 'AddUserToCommunity',
-        impl_alias => 'dotlrn_syllabus::add_user_to_community',
-        impl_pl => 'TCL'
-    );
-
     -- RemoveUser
     foo := acs_sc_impl.new_alias (
         impl_contract_name => 'dotlrn_applet',
         impl_name => 'dotlrn_syllabus',
         impl_operation_name => 'RemoveUser',
         impl_alias => 'dotlrn_syllabus::remove_user',
+        impl_pl => 'TCL'
+    );
+
+    -- AddUserToCommunity
+    foo := acs_sc_impl.new_alias (
+        impl_contract_name => 'dotlrn_applet',
+        impl_name => 'dotlrn_syllabus',
+        impl_operation_name => 'AddUserToCommunity',
+        impl_alias => 'dotlrn_syllabus::add_user_to_community',
         impl_pl => 'TCL'
     );
 
