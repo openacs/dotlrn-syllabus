@@ -78,9 +78,9 @@ begin
 
     -- create the implementation
     foo := acs_sc_impl.new(
-        'portal_datasource',
-        'syllabus_portlet',
-        'syllabus_portlet'
+        impl_contract_name => 'portal_datasource',
+        impl_name => 'syllabus_portlet',
+        impl_owner_name => 'syllabus_portlet'
     );
 
     -- add all the hooks
