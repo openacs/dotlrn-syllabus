@@ -7,7 +7,7 @@
   <msg key="Go_to">Gå til</msg>
   <msg key="Go_to_the_Syllabus">Gå til Pensum</msg>
   <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Upload&lt;/a&gt; eller &lt;a href=&quot;%link_to_url%&quot;&gt;link&lt;/a&gt; til et Pensum</msg>
-  <msg key="No_Syllabus_Found">Ingen kursusbeskrivelse</msg>
+  <msg key="No_Syllabus_Found">Intet Pensum Fundet</msg>
   <msg key="or">eller</msg>
-  <msg key="pretty_name">Kursusbeskrivelse</msg>
+  <msg key="pretty_name">Pensum</msg>
 </message_catalog>
