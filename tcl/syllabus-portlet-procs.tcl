@@ -48,30 +48,28 @@ namespace eval syllabus_portlet {
     }
 
     ad_proc -public add_self_to_page {
-        {-page_id ""}
-	portal_id
-	instance_id
+	{-portal_id:required}
+	{-package_id:required}
     } {
         Adds a syllabus portlet to the specified portal.
 
-        @param page_id The page to add self to
 	@param portal_id The portal to add self to
-        @param instance_id
 	@return element_id The new element's id
     } {
-        return [portal::add_element_or_append_id \
+        return [portal::add_element_parameters \
                     -portal_id $portal_id \
                     -page_id $page_id \
                     -portlet_name [get_my_name] \
                     -pretty_name [get_pretty_name] \
                     -key "package_id" \
-                    -value_id $instance_id
+                    -value $package_id \
+                    -param_action "overwrite"
         ]
     }
 
     ad_proc -public remove_self_from_page {
-	portal_id
-	instance_id
+	{-portal_id:required}
+        {-package_id:required}
     } {
         Removes a syllabus portlet element from the specified page.
 
@@ -79,11 +77,11 @@ namespace eval syllabus_portlet {
         @param instance_id
         @param party_id The party for which to display syllabus papers
     } {
-        portal::remove_element_or_remove_id \
+        portal::remove_element_parameters \
             -portal_id $portal_id \
             -portlet_name [get_my_name] \
             -key "package_id" \
-            -value_id $instance_id
+            -value $package_id
     }
 
     ad_proc -public show {

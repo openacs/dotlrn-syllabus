@@ -28,30 +28,22 @@ namespace eval dotlrn_syllabus {
 
     ad_proc -public applet_key {
     } {
-        get the package_key this applet deals with
+        What's my key?
     } {
         return "dotlrn_syllabus"
     }
 
     ad_proc -public package_key {
     } {
-        get the package_key this applet deals with
+        What's the key of the package I deal with?
     } {
         return "dotlrn-syllabus"
     }
 
-    ad_proc portal_element_key {
-    } {
-        return the portal element key
-    } {
-        return "syllabus-portlet"
-    }
-
     ad_proc -public get_pretty_name {
     } {
-        returns the pretty name
     } {
-        return "dotLRN Syllabus"
+        return "Syllabus"
     }
 
     ad_proc -public add_applet {
@@ -65,6 +57,7 @@ namespace eval dotlrn_syllabus {
     } {
         Used for one-time destroy - must be repeatable!
     } {
+        ad_return_complaint 1 "[applet_key] remove_applet not implimented!"
     }
     
     ad_proc -public add_applet_to_community {
@@ -72,23 +65,27 @@ namespace eval dotlrn_syllabus {
     } {
         Add the syllabus paper applet to a specifc dotlrn community
     } {
-        set pt_id [dotlrn_community::get_portal_template_id $community_id]
+        # set up the admin portlet
+        set admin_portal_id [dotlrn_community::get_admin_portal_id \
+                                 -community_id $community_id
+        ]
+                
+        syllabus_admin_portlet::add_self_to_page $admin_portal_id
 
-        syllabus_portlet::add_self_to_page $pt_id $community_id
+        # set up the syllabus portlet
+        set portal_id [dotlrn_community::get_portal_id -community_id $community_id]
 
-        if {[dotlrn_community::dummy_comm_p -community_id $community_id]} {
-            return
-        }
+        set args [ns_set create]
+        ns_set put $args package_id $community_id
 
-        dotlrn_syllabus_admin::add_applet_to_community $community_id
+        add_portlet_helper $portal_id $args
     }
 
     ad_proc -public remove_applet_from_community {
         community_id
     } {
     } {
-        dotlrn_syllabus_admin::remove_applet_to_community $community_id
-        syllabus_portlet::remove_self_from_page $pt_id $community_id
+        ad_return_complaint 1 "[applet_key] remove_applet_from_community not implimented!"
     }
 
     ad_proc -public add_user {
@@ -96,6 +93,7 @@ namespace eval dotlrn_syllabus {
     } {
         No user-specifc actions
     } {
+        # noop
     }
 
     ad_proc -public remove_user {
@@ -103,6 +101,7 @@ namespace eval dotlrn_syllabus {
     } {
         No user-specifc actions
     } {
+        # noop
     }
 
     ad_proc -public add_user_to_community {
@@ -111,6 +110,7 @@ namespace eval dotlrn_syllabus {
     } {
         No user-specifc actions
     } {
+        # noop
     }
 
     ad_proc -public remove_user_from_community {
@@ -119,30 +119,48 @@ namespace eval dotlrn_syllabus {
     } {
         No user-specifc actions
     } {
+        # noop
     }
 
     ad_proc -public add_portlet {
+        portal_id
+    } {
+    } {
+        set args [ns_set create]
+        ns_set put $args package_id 0
+        set type [dotlrn::get_type_from_portal_id -portal_id $portal_id]
+        
+        if {![string equal $type "user"] 
+            && ![string equal $type "dotlrn_community"]
+            && ![string equal $type "dotlrn_club"]} {
+            # Add the portlet only to class instaces
+            add_portlet_helper $portal_id $args
+        }  else {
+            # not to any of the other types
+            return
+        }     
+    }
+
+    ad_proc -public add_portlet_helper {
+        portal_id
         args
     } {
-        A helper proc to add the underlying portlet to the given portal. 
-        
-        @param args a list-ified array of args defined in add_applet_to_community
     } {
-        ns_log notice "** Error in [get_pretty_name]: 'add_portlet' not implemented!"
-        ad_return_complaint 1  "Please notifiy the administrator of this error:
-        ** Error in [get_pretty_name]: 'add_portlet' not implemented!"
+        syllabus_portlet::add_self_to_page \
+            -portal_id $portal_id \
+            -package_id [ns_set get $args "package_id"]
     }
 
     ad_proc -public remove_portlet {
+        portal_id 
         args
     } {
         A helper proc to remove the underlying portlet from the given portal. 
         
-        @param args a list-ified array of args defined in remove_applet_from_community
+        @param portal_id
+        @param args an ns_set
     } {
-        ns_log notice "** Error in [get_pretty_name]: 'remove_portlet' not implemented!"
-        ad_return_complaint 1  "Please notifiy the administrator of this error:
-        ** Error in [get_pretty_name]: 'remove_portlet' not implemented!"
+        ad_return_complaint 1 "[applet_key] remove_portlet not implimented!"
     }
 
     ad_proc -public clone {
@@ -151,9 +169,8 @@ namespace eval dotlrn_syllabus {
     } {
         Clone this applet's content from the old community to the new one
     } {
-        ns_log notice "** Error in [get_pretty_name] 'clone' not implemented!"
-        ad_return_complaint 1  "Please notifiy the administrator of this error:
-        ** Error in [get_pretty_name]: 'clone' not implemented!"
+        ns_log notice "Cloning: [applet_key]"
+        add_applet_to_community $new_community_id
     }
 
 }

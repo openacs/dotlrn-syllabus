@@ -98,6 +98,7 @@ namespace eval dotlrn_syllabus_admin {
     } {
         No user specifc actions
     } {
+        # noop
     }
 
     ad_proc -public add_user_to_community {
@@ -106,6 +107,7 @@ namespace eval dotlrn_syllabus_admin {
     } {
         No user specifc actions
     } {
+        # noop
     }
 
     ad_proc -public remove_user {

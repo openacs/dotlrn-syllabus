@@ -42,7 +42,7 @@ namespace eval syllabus_admin_portlet {
     }
 
     ad_proc -public add_self_to_page {
-	portal_id
+	{-portal_id:required}
     } {
         Adds a syllabus admin portlet element to the specified portal
     } {
@@ -53,7 +53,7 @@ namespace eval syllabus_admin_portlet {
     }
 
     ad_proc -public remove_self_from_page {
-	portal_id
+	{-portal_id:required}
     } {
         Removes a syllabus admin portlet element from the specified portal
     } {
