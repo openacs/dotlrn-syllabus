@@ -20,18 +20,21 @@
 
 <ul>
   
-  <if @syllabus_id@ not eq "">
-    <if @type@ eq url>
-        <li><a href="file-storage/url-goto?url_id=@syllabus_id@">#dotlrn-syllabus.Go_to#</a> #dotlrn-syllabus.or#
-        <a href="file-storage/simple-edit?object_id=@syllabus_id@">#dotlrn-syllabus.Edit#</a>
-       #dotlrn-syllabus.pretty_name#
-    </if>
-    <else>
-      <li><a href="file-storage/file?file_id=@syllabus_id@">#dotlrn-syllabus.Go_to_the_Syllabus#</a>
-    </else>
+  <if @community_id@ eq "">
+    <small>No community specified</small>
   </if>
   <else>
+    <if @syllabus_id@ not eq "">
+      <if @type@ eq url>
+        <li><a href="file-storage/url-goto?url_id=@syllabus_id@">#dotlrn-syllabus.Go_to#</a> #dotlrn-syllabus.or#
+        <a href="file-storage/simple-edit?object_id=@syllabus_id@">#dotlrn-syllabus.Edit#</a>#dotlrn-syllabus.pretty_name#
+      </if>
+      <else>
+        <li><a href="file-storage/file?file_id=@syllabus_id@">#dotlrn-syllabus.Go_to_the_Syllabus#</a>
+      </else>
+    </if>
+    <else>
     <li>#dotlrn-syllabus.lt_a_hrefupload_urlUploa#
+    </else>
   </else>
-  
 </ul>

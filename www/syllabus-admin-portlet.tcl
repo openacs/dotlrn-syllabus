@@ -33,7 +33,17 @@ set syllabus_info_list [syllabus_portlet::get_syllabus_info_list \
 set public_folder_id [lindex $syllabus_info_list 0]
 set syllabus_id [lindex $syllabus_info_list 1]
 set type [lindex $syllabus_info_list 2]
+set community_id [dotlrn_community::get_community_id]
 
 set title [_ dotlrn-syllabus.pretty_name]
 set upload_url "file-storage/file-add?folder_id=$public_folder_id&lock_title_p=1&title=[ad_urlencode $title]"
 set link_to_url "file-storage/simple-add?folder_id=$public_folder_id&lock_title_p=1&title=[ad_urlencode $title]"
+# DRB: community_id will be blank if we're called by the portal package portal preview
+# code for the generic class portlet template.
+
+if { ![string equal $community_id ""] } {
+    set syllabus_info_list [syllabus_portlet::get_syllabus_info_list -community_id $community_id]
+    set public_folder_id [lindex $syllabus_info_list 0]
+    set syllabus_id [lindex $syllabus_info_list 1]
+    set type [lindex $syllabus_info_list 2]
+}
