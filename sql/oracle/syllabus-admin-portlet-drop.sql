@@ -37,10 +37,10 @@ begin
     end;
 
     if ds_id is not null then
-        portal_datasource.delete(ds_id);
+        portal_datasource.del(ds_id);
     end if;
 
-    acs_sc_binding.delete(
+    acs_sc_binding.del(
         contract_name => 'portal_datasource',
         impl_name => 'syllabus_admin_portlet'
     );
@@ -87,7 +87,7 @@ begin
         impl_operation_name => 'RemoveSelfFromPage'
     );
 
-    acs_sc_impl.delete(
+    acs_sc_impl.del(
         impl_contract_name => 'portal_datasource',
         impl_name => 'syllabus_admin_portlet'
     );

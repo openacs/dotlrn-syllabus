@@ -26,7 +26,7 @@ declare
     foo                         integer;
 begin
 
-    acs_sc_binding.delete (
+    acs_sc_binding.del (
         contract_name => 'dotlrn_applet',
         impl_name => 'dotlrn_syllabus'
     );
@@ -87,7 +87,7 @@ begin
         impl_operation_name => 'RemoveUserFromCommunity'
     );
 
-    acs_sc_impl.delete (
+    acs_sc_impl.del (
         impl_contract_name => 'dotlrn_applet',
         impl_name => 'dotlrn_syllabus'
     );
