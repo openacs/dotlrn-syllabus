@@ -18,25 +18,6 @@
         <requires url="acs-service-contract" version="4.2"/>
         <requires url="dotlrn" version="1.0"/>
 
-        <files>
-            <file type="package_spec" path="dotlrn-syllabus.info"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-syllabus-applet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-syllabus-applet-drop.sql"/>
-            <file type="data_model_create" db_type="oracle" path="sql/oracle/dotlrn-syllabus-create.sql"/>
-            <file type="data_model_drop" db_type="oracle" path="sql/oracle/dotlrn-syllabus-drop.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/syllabus-admin-portlet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/syllabus-admin-portlet-drop.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/syllabus-portlet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/syllabus-portlet-drop.sql"/>
-            <file type="tcl_procs" path="tcl/dotlrn-syllabus-admin-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/dotlrn-syllabus-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/syllabus-admin-portlet-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/syllabus-portlet-procs.tcl"/>
-            <file type="content_page" path="www/syllabus-admin-portlet.adp"/>
-            <file type="content_page" path="www/syllabus-admin-portlet.tcl"/>
-            <file type="content_page" path="www/syllabus-portlet.adp"/>
-            <file type="content_page" path="www/syllabus-portlet.tcl"/>
-        </files>
         <parameters>
         <!-- No version parameters -->
         </parameters>
