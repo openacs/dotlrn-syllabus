@@ -60,6 +60,14 @@ namespace eval dotlrn_syllabus_admin {
         dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key]
     }
 
+    ad_proc -public remove_applet {
+        community_id
+        package_id
+    } {
+        remove the applet from dotlrn
+    } {
+    }
+
     ad_proc -public add_applet_to_community {
         community_id
     } {
@@ -71,13 +79,19 @@ namespace eval dotlrn_syllabus_admin {
         syllabus_admin_portlet::add_self_to_page $pt_id $community_id
     }
 
-    ad_proc -public remove_applet {
+    # aks XXX FIXME - i think these procs are messed up somehow. 
+    # is it just ordering? i can't tell
+
+    ad_proc -public remove_applet_from_community {
         community_id
-        package_id
     } {
-        remove the applet from the community
     } {
+        set pt_id \
+                [dotlrn_community::get_community_admin_portal_id $community_id]
+
+        syllabus_admin_portlet::remove_self_to_page $pt_id $community_id
     }
+
 
     ad_proc -public add_user {
         user_id

@@ -74,12 +74,11 @@ namespace eval dotlrn_syllabus {
     } {
         set pt_id [dotlrn_community::get_portal_template_id $community_id]
 
+        syllabus_portlet::add_self_to_page $pt_id $community_id
+
         if {[dotlrn_community::dummy_comm_p -community_id $community_id]} {
-            syllabus_portlet::add_self_to_page $pt_id $community_id
             return
         }
-
-        syllabus_portlet::add_self_to_page $pt_id $community_id
 
         dotlrn_syllabus_admin::add_applet_to_community $community_id
     }
@@ -88,6 +87,8 @@ namespace eval dotlrn_syllabus {
         community_id
     } {
     } {
+        dotlrn_syllabus_admin::remove_applet_to_community $community_id
+        syllabus_portlet::remove_self_from_page $pt_id $community_id
     }
 
     ad_proc -public add_user {
