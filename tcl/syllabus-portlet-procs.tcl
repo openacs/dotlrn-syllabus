@@ -129,6 +129,7 @@ namespace eval syllabus_portlet {
                 lappend out_list [ns_set get $row object_id]
                 lappend out_list [ns_set get $row type]
                 lappend out_list [ns_set get $row live_revision]
+		lappend out_list [ns_set get $row file_upload_name]
             }
         }
 
