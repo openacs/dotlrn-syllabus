@@ -2,4 +2,6 @@
 <message_catalog package_key="dotlrn-syllabus" package_version="0.1d" locale="ch_zh" charset="utf-8">
 
   <msg key="Edit">園辞</msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;上传&lt;/a&gt;或&lt;a href=&quot;%link_to_url%&quot;&gt;链接&lt;/a&gt;到大纲</msg>
+  <msg key="No_Syllabus_Found">没有找到大纲</msg>
 </message_catalog>
