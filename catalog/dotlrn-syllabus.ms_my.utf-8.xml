@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="0.1d" locale="ms_my" charset="utf-8">
+
+  <msg key="admin_pretty_name">Pentadbiran Silabus</msg>
+  <msg key="Download">Muat turun</msg>
+  <msg key="Edit">Edit</msg>
+  <msg key="Go_to">Pergi ke</msg>
+  <msg key="Go_to_the_Syllabus">Pergi ke Silabus</msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Muat naik&lt;/a&gt; atau &lt;a href=&quot;%link_to_url%&quot;&gt;pautan&lt;/a&gt; ke suatu Silabus</msg>
+  <msg key="No_Syllabus_Found">Tiada Silabus Dijumpai</msg>
+  <msg key="or">atau</msg>
+  <msg key="pretty_name">Silabus</msg>
+</message_catalog>

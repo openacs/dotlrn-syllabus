@@ -5,9 +5,9 @@
   <msg key="Download">Herunterladen</msg>
   <msg key="Edit">Bearbeiten</msg>
   <msg key="Go_to">Wechseln zu</msg>
-  <msg key="Go_to_the_Syllabus">Zum Lehrplan wechseln</msg>
+  <msg key="Go_to_the_Syllabus">Zum Lehrplan</msg>
   <msg key="lt_a_hrefupload_urlUploa">Einen Lehrplan &lt;a href=&quot;%upload_url%&quot;&gt;hochladen&lt;/a&gt; oder einen &lt;a href=&quot;%link_to_url%&quot;&gt;Link&lt;/a&gt; zu einem Lehrplan einrichten</msg>
-  <msg key="No_Syllabus_Found">Kein Lehrplan verfügbar</msg>
+  <msg key="No_Syllabus_Found">Kein Lehrplan vorhanden</msg>
   <msg key="or">oder</msg>
   <msg key="pretty_name">Lehrplan</msg>
 </message_catalog>
