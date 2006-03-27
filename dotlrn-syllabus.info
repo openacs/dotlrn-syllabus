@@ -14,7 +14,7 @@
 
         <provides url="dotlrn-syllabus" version="2.2.0a1"/>
         <requires url="acs-service-contract" version="5.0.0b4"/>
-        <requires url="dotlrn" version="1.0"/>
+        <requires url="dotlrn" version="2.2.0a1"/>
 
         <callbacks>
         </callbacks>
