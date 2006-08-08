@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="2.2.0b2" locale="ro_RO" charset="utf-8">
+
+  <msg key="admin_pretty_name">Administrare Programă</msg>
+  <msg key="Download">Download-ează</msg>
+  <msg key="Edit">Modifică</msg>
+  <msg key="Go_to">Du-te la</msg>
+  <msg key="Go_to_the_Syllabus">Du-te la Programă</msg>
+  <msg key="lt_a_hrefupload_urlUploa"> &lt;a href=&quot;%upload_url%&quot;&gt;Încarcă&lt;/a&gt; sau &lt;a href=&quot;%link_to_url%&quot;&gt;fă link&lt;/a&gt; la Programă</msg>
+  <msg key="No_Syllabus_Found">Nu am găsit nici o Programă</msg>
+  <msg key="or">sau</msg>
+  <msg key="pretty_name">Programă</msg>
+</message_catalog>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="2.2.0b2" locale="hi_IN" charset="utf-8">
+
+  <msg key="admin_pretty_name">पाठयक्रम  प्रशासन  </msg>
+  <msg key="Download">डाउनलोड</msg>
+  <msg key="Edit">बदलना </msg>
+  <msg key="Go_to">पर जाये</msg>
+  <msg key="Go_to_the_Syllabus">पाठयक्रम की ओर जाना </msg>
+  <msg key="lt_a_hrefupload_urlUploa">पाठ्यक्रम मे &lt;a href=&quot;%upload_url%&quot;&gt;अपलोड करें&lt;/a&gt; अथवा &lt;a href=&quot;%link_to_url%&quot;&gt;संबन्ध कड़ी जोड़ें&lt;/a&gt;</msg>
+  <msg key="No_Syllabus_Found">पाठयक्रम नही मिलना </msg>
+  <msg key="or">या </msg>
+  <msg key="pretty_name">पाठयक्रम</msg>
+</message_catalog>

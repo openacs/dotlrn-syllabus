@@ -129,7 +129,7 @@ namespace eval syllabus_portlet {
 
         # this should move to fs::
         foreach row $rows {
-            if {[string equal -nocase [ns_set get $row title] [_ dotlrn-syllabus.pretty_name]]} {
+            if {[string equal -nocase [ns_set get $row title] [_ dotlrn-syllabus.pretty_name]] || ([string equal -nocase [ns_set get $row name] [_ dotlrn-syllabus.pretty_name]] && [string equal -nocase [ns_set get $row type] "url"])} {
                 lappend out_list [ns_set get $row object_id]
                 lappend out_list [ns_set get $row type]
                 lappend out_list [ns_set get $row live_revision]

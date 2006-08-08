@@ -78,7 +78,6 @@ namespace eval syllabus_admin_portlet {
 
 
     ad_proc -public link {
-        cf
     } {
     } {
         # noop

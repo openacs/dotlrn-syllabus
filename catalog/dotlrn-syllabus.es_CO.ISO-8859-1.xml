@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-syllabus" package_version="2.2.0b2" locale="es_ES" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-syllabus" package_version="2.2.0b2" locale="es_CO" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Administración de programas</msg>
-  <msg key="Download">Descarga</msg>
+  <msg key="Download">Descargar</msg>
   <msg key="Edit">Editar</msg>
   <msg key="Go_to">Ir a</msg>
   <msg key="Go_to_the_Syllabus">Ir al programa</msg>
