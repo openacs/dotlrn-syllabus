@@ -27,14 +27,15 @@
     <if @syllabus_id@ not eq "">
       <if @type@ eq url>
         <li><a href="file-storage/url-goto?url_id=@syllabus_id@">#dotlrn-syllabus.Go_to#</a> #dotlrn-syllabus.or#
-        <a href="file-storage/simple-edit?object_id=@syllabus_id@">#dotlrn-syllabus.Edit#</a>#dotlrn-syllabus.pretty_name#
+        <a href="file-storage/simple-edit?object_id=@syllabus_id@">#dotlrn-syllabus.Edit#</a> #dotlrn-syllabus.pretty_name#
+	</li>
       </if>
       <else>
-        <li><a href="file-storage/file?file_id=@syllabus_id@">#dotlrn-syllabus.Go_to_the_Syllabus#</a>
+        <li><a href="file-storage/file?file_id=@syllabus_id@">#dotlrn-syllabus.Go_to_the_Syllabus#</a></li>
       </else>
     </if>
     <else>
-    <li>#dotlrn-syllabus.lt_a_hrefupload_urlUploa#
+    <li>#dotlrn-syllabus.lt_a_hrefupload_urlUploa#</li>
     </else>
   </else>
 </ul>
