@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-syllabus" package_version="2.3.1" locale="el_GR" charset="utf-8">
+
+  <msg key="admin_pretty_name">Διαχείριση διδακτέας ύλης</msg>
+  <msg key="Download">Κατέβασμα</msg>
+  <msg key="Edit">Επεξεργασία</msg>
+  <msg key="Go_to">Μετάβαση σε</msg>
+  <msg key="Go_to_the_Syllabus">Μετάβαση στη διδακτέα ύλη</msg>
+  <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Ανέβασμα&lt;/a&gt; ή &lt;a href=&quot;%link_to_url%&quot;&gt;σύνδεση&lt;/a&gt; σε διδακτέα ύλη</msg>
+  <msg key="No_Syllabus_Found">Δεν βρέθηκε διδακτέα ύλη</msg>
+  <msg key="or">ή</msg>
+  <msg key="pretty_name">Διδακτέα ύλη</msg>
+</message_catalog>
