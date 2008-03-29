@@ -36,8 +36,8 @@ set type [lindex $syllabus_info_list 2]
 set community_id [dotlrn_community::get_community_id]
 
 set title [_ dotlrn-syllabus.pretty_name]
-set upload_url "file-storage/file-add?folder_id=$public_folder_id&lock_title_p=1&title=[ad_urlencode $title]"
-set link_to_url "file-storage/simple-add?folder_id=$public_folder_id&lock_title_p=1&title=[ad_urlencode $title]"
+set upload_url [export_vars -base "file-storage/file-add" {{folder_id $public_folder_id} {lock_title_p 1} {title $title}}]
+set link_to_url [export_vars -base "file-storage/simple-add" {{folder_id $public_folder_id} {lock_title_p 1} {title $title}}]
 # DRB: community_id will be blank if we're called by the portal package portal preview
 # code for the generic class portlet template.
 

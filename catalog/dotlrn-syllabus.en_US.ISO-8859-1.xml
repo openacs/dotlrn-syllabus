@@ -6,8 +6,10 @@
   <msg key="Edit">Edit</msg>
   <msg key="Go_to">Go to</msg>
   <msg key="Go_to_the_Syllabus">Go to the Syllabus</msg>
+  <msg key="Link_to_a_syllabus">Add a link to a syllabus</msg>
   <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Upload&lt;/a&gt; or &lt;a href=&quot;%link_to_url%&quot;&gt;link&lt;/a&gt; to a Syllabus</msg>
   <msg key="No_Syllabus_Found">No Syllabus Found</msg>
   <msg key="or">or</msg>
   <msg key="pretty_name">Syllabus</msg>
+  <msg key="Upload_new_syllabus">Upload a new syllabus</msg>
 </message_catalog>
