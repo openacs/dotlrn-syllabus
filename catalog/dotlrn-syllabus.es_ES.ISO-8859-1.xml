@@ -6,8 +6,10 @@
   <msg key="Edit">Editar</msg>
   <msg key="Go_to">Ir a</msg>
   <msg key="Go_to_the_Syllabus">Ir al programa</msg>
+  <msg key="Link_to_a_syllabus">Añadir enlace a un programa de estudios</msg>
   <msg key="lt_a_hrefupload_urlUploa">&lt;a href=&quot;%upload_url%&quot;&gt;Subir&lt;/a&gt; o &lt;a href=&quot;%link_to_url%&quot;&gt;enlazar&lt;/a&gt; a un programa</msg>
   <msg key="No_Syllabus_Found">Sin programa</msg>
   <msg key="or">o</msg>
   <msg key="pretty_name">Programa de estudios</msg>
+  <msg key="Upload_new_syllabus">Subir uno nuevo programa de estudios</msg>
 </message_catalog>
