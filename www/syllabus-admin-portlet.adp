@@ -18,24 +18,30 @@
 
 %>
 
-<ul>
-  
   <if @community_id@ eq "">
     <small>No community specified</small>
   </if>
   <else>
     <if @syllabus_id@ not eq "">
+      <ul>
       <if @type@ eq url>
         <li><a href="file-storage/url-goto?url_id=@syllabus_id@" title="#dotlrn-syllabus.Go_to# #dotlrn-syllabus.pretty_name#">#dotlrn-syllabus.Go_to#</a> #dotlrn-syllabus.or#
         <a href="file-storage/simple-edit?object_id=@syllabus_id@" title="#dotlrn-syllabus.Edit# #dotlrn-syllabus.pretty_name#">#dotlrn-syllabus.Edit#</a> #dotlrn-syllabus.pretty_name#
-	</li>
+	    </li>
       </if>
       <else>
         <li><a href="file-storage/file?file_id=@syllabus_id@" title="#dotlrn-syllabus.Go_to_the_Syllabus#">#dotlrn-syllabus.Go_to_the_Syllabus#</a></li>
       </else>
+      </ul>
     </if>
     <else>
-    <li>#dotlrn-syllabus.lt_a_hrefupload_urlUploa#</li>
+      <ul>
+        <li>
+          <a href="@upload_url@" title="#dotlrn-syllabus.Upload_new_syllabus#">#dotlrn-syllabus.Upload_new_syllabus#</a>
+        </li>
+        <li>
+          <a href="@link_to_url@" title="#dotlrn-syllabus.Link_to_a_syllabus#">#dotlrn-syllabus.Link_to_a_syllabus#</a>
+        </li>
+      </ul>
     </else>
   </else>
-</ul>
