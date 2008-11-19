@@ -124,7 +124,7 @@ namespace eval syllabus_portlet {
         # This would be ugly even if it *weren't* slow.
 
         set rows [fs::get_folder_contents -folder_id $public_folder_id \
-                -user_id [dotlrn::get_users_rel_segment_id] 
+                -user_id [ad_conn user_id] 
         ]
 
         set pretty_name "#dotlrn-syllabus.pretty_name#"
