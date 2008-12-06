@@ -108,7 +108,7 @@ namespace eval syllabus_portlet {
         set out_list [list]
 
         set element_id [portal::get_element_ids_by_ds \
-                [dotlrn_community::get_portal_id] \
+                [dotlrn_community::get_portal_id -community_id $community_id] \
                 [fs_portlet::get_my_name]
         ]
 
