@@ -59,13 +59,13 @@ namespace eval dotlrn_syllabus {
     } {
         Used for one-time destroy - must be repeatable!
     } {
-        ad_return_complaint 1 "[applet_key] remove_applet not implimented!"
+        ad_return_complaint 1 "[applet_key] remove_applet not implemented!"
     }
     
     ad_proc -public add_applet_to_community {
         community_id
     } {
-        Add the syllabus paper applet to a specifc dotlrn community
+        Add the syllabus paper applet to a specific dotlrn community
     } {
         # set up the admin portlet
         set admin_portal_id [dotlrn_community::get_admin_portal_id \
@@ -89,13 +89,13 @@ namespace eval dotlrn_syllabus {
         community_id
     } {
     } {
-        ad_return_complaint 1 "[applet_key] remove_applet_from_community not implimented!"
+        ad_return_complaint 1 "[applet_key] remove_applet_from_community not implemented!"
     }
 
     ad_proc -public add_user {
         user_id
     } {
-        No user-specifc actions
+        No user-specific actions
     } {
         # noop
     }
@@ -103,7 +103,7 @@ namespace eval dotlrn_syllabus {
     ad_proc -public remove_user {
         user_id
     } {
-        No user-specifc actions
+        No user-specific actions
     } {
         # noop
     }
@@ -112,7 +112,7 @@ namespace eval dotlrn_syllabus {
         community_id
         user_id
     } {
-        No user-specifc actions
+        No user-specific actions
     } {
         # noop
     }
@@ -121,7 +121,7 @@ namespace eval dotlrn_syllabus {
         community_id
         user_id
     } {
-        No user-specifc actions
+        No user-specific actions
     } {
         # noop
     }
@@ -164,7 +164,7 @@ namespace eval dotlrn_syllabus {
         @param portal_id
         @param args an ns_set
     } {
-        ad_return_complaint 1 "[applet_key] remove_portlet not implimented!"
+        ad_return_complaint 1 "[applet_key] remove_portlet not implemented!"
     }
 
     ad_proc -public clone {

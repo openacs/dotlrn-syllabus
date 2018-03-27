@@ -71,7 +71,7 @@ namespace eval dotlrn_syllabus_admin {
     ad_proc -public add_applet_to_community {
         community_id
     } {
-        Add the syllabus applet to a specifc dotlrn community
+        Add the syllabus applet to a specific dotlrn community
     } {
         set pt_id \
                 [dotlrn_community::get_community_admin_portal_id $community_id]
@@ -96,7 +96,7 @@ namespace eval dotlrn_syllabus_admin {
     ad_proc -public add_user {
         user_id
     } {
-        No user specifc actions
+        No user specific actions
     } {
         # noop
     }
@@ -105,7 +105,7 @@ namespace eval dotlrn_syllabus_admin {
         community_id
         user_id
     } {
-        No user specifc actions
+        No user specific actions
     } {
         # noop
     }
@@ -113,7 +113,7 @@ namespace eval dotlrn_syllabus_admin {
     ad_proc -public remove_user {
         user_id
     } {
-        No user specifc actions
+        No user specific actions
     } {
     }
 
@@ -121,7 +121,7 @@ namespace eval dotlrn_syllabus_admin {
         community_id
         user_id
     } {
-        No user specifc actions
+        No user specific actions
     } {
     }
 
